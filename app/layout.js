@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
+import Footer from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Inter({ subsets: ["latin"], variable: "--font-poppins" });
@@ -27,8 +29,10 @@ export default function RootLayout({ children }) {
                     poppins.className
                 )} antialiased`}
             >
+                <Header />
                 {children}
                 <Toaster richColors position="top-right" />
+                <Footer />
             </body>
         </html>
     );
