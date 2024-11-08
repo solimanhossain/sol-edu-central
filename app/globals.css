@@ -99,7 +99,7 @@
         @apply flex items-center  justify-center text-sm lg:text-base font-medium transition-colors hover:text-foreground/80;
     }
     .logo-hover {
-        @apply transition-all hover:scale-105 hover:text-[#7cd872] text-[#416ff6];
+        @apply transition-all hover:scale-105 hover:text-solgreen text-solblue;
     }
     .flex-center {
         @apply flex flex-col justify-center items-center;
