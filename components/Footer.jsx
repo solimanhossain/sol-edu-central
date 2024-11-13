@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "@/assets/logo.svg";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
     return (
@@ -12,13 +12,7 @@ export default function Footer() {
                         href="/"
                         className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse logo-hover"
                     >
-                        <Image
-                            className="max-w-[100px]"
-                            src={logo}
-                            width={32}
-                            height={32}
-                            alt="Logo"
-                        />
+                        <Logo />
                         <span className="self-center text-base lg:text-2xl md:text-lg font-semibold whitespace-nowrap">
                             SOLEdu Central
                         </span>

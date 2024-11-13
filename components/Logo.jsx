@@ -12,7 +12,7 @@ export default function Logo() {
                     d="M2.625 17.06v-1.422l8.125 4.17v-6.113l1.825-1.199c.027.087.05.172.05.346v7.988c0 1.33-1.412 1.321-2.026.969c-2.037-1.17-6.85-3.56-7.312-3.768c-.461-.208-.654-.734-.662-.972"
                 ></path>
                 <path
-                    fill="#4273eb"
+                    fill="#9e9e9e"
                     d="m8.25 14.781l-5.625-3.127v2.08l5.625 3.074z"
                 ></path>
                 <path
@@ -40,8 +40,8 @@ export default function Logo() {
                         y2={19.782}
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stopColor="#7cd872"></stop>
-                        <stop offset={0.796} stopColor="#4073f3"></stop>
+                        <stop stopColor="#cfcfcf"></stop>
+                        <stop offset={0.796} stopColor="#545454"></stop>
                     </linearGradient>
                     <linearGradient
                         id="tokenBrandedEdu1"
@@ -51,8 +51,8 @@ export default function Logo() {
                         y2={12.176}
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stopColor="#6ec185"></stop>
-                        <stop offset={1} stopColor="#4373ea"></stop>
+                        <stop stopColor="#999999"></stop>
+                        <stop offset={1} stopColor="#7a7a7a"></stop>
                     </linearGradient>
                     <linearGradient
                         id="tokenBrandedEdu2"
@@ -62,8 +62,8 @@ export default function Logo() {
                         y2={9.763}
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stopColor="#7bdf6a"></stop>
-                        <stop offset={1} stopColor="#416ff6"></stop>
+                        <stop stopColor="#999999"></stop>
+                        <stop offset={1} stopColor="#0f0f0f"></stop>
                     </linearGradient>
                     <linearGradient
                         id="tokenBrandedEdu3"
@@ -73,8 +73,8 @@ export default function Logo() {
                         y2={22}
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stopColor="#7cd872"></stop>
-                        <stop offset={1} stopColor="#4073f3"></stop>
+                        <stop stopColor="#cfcfcf"></stop>
+                        <stop offset={1} stopColor="#545454"></stop>
                     </linearGradient>
                     <linearGradient
                         id="tokenBrandedEdu4"
@@ -84,8 +84,8 @@ export default function Logo() {
                         y2={18.885}
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stopColor="#7cd872"></stop>
-                        <stop offset={1} stopColor="#4073f3"></stop>
+                        <stop stopColor="#cfcfcf"></stop>
+                        <stop offset={1} stopColor="#545454"></stop>
                     </linearGradient>
                 </defs>
             </g>

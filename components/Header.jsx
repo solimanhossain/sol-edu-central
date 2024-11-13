@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import MenuBar from "./header/MenuBar";
-import SmNavMenu from "./header/SmNavMenu";
-import AvatarMenu from "./header/AvatarMenu";
-import LoginRegister from "./header/LoginRegister";
+import MenuBar from "@/components/header/MenuBar";
+import SmNavMenu from "@/components/header/SmNavMenu";
+import { buttonVariants } from "@/components/ui/button";
+import AvatarMenu from "@/components/header/AvatarMenu";
+import { cn } from "@/lib/utils";
 
 export function Header() {
     return (
@@ -22,7 +23,27 @@ export function Header() {
 
                 <div className="flex items-center gap-3">
                     <div className="items-center gap-3 hidden md:flex">
-                        <LoginRegister />
+                        <Link
+                            href="/login"
+                            className={cn(
+                                buttonVariants({ size: "sm" }),
+                                "px-4"
+                            )}
+                        >
+                            Login
+                        </Link>
+                        <Link
+                            href="/register"
+                            className={cn(
+                                buttonVariants({
+                                    size: "sm",
+                                    variant: "outline",
+                                }),
+                                "px-4"
+                            )}
+                        >
+                            Register
+                        </Link>
                     </div>
                     <AvatarMenu />
                 </div>

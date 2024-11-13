@@ -1,12 +1,12 @@
+import Link from "next/link";
 import { BookCheck, Library, LogOut, Users } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Link from "next/link";
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function AvatarMenu() {
     return (
@@ -34,13 +34,13 @@ export default function AvatarMenu() {
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer border-b" asChild>
-                    <Link href="">
+                    <Link href="account/testimonials-certificates">
                         <BookCheck />
                         Testimonials & Certificates
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer" asChild>
-                    <Link href="">
+                    <Link href="/logout">
                         <LogOut />
                         Logout
                     </Link>

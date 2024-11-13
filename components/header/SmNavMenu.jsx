@@ -3,10 +3,12 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
-import MenuBar from "../header/MenuBar";
-import LoginRegister from "../header/LoginRegister";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import MenuBar from "@/components/header/MenuBar";
+import Link from "next/link";
 
 export default function Test() {
     return (
@@ -23,7 +25,27 @@ export default function Test() {
                         <MenuBar />
                     </div>
                     <DropdownMenuItem className="flex justify-evenly px-2">
-                        <LoginRegister />
+                        <Link
+                            href="/login"
+                            className={cn(
+                                buttonVariants({ size: "sm" }),
+                                "px-4"
+                            )}
+                        >
+                            Login
+                        </Link>
+                        <Link
+                            href="/register"
+                            className={cn(
+                                buttonVariants({
+                                    size: "sm",
+                                    variant: "outline",
+                                }),
+                                "px-4"
+                            )}
+                        >
+                            Register
+                        </Link>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
