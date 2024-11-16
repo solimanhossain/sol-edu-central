@@ -5,11 +5,6 @@ import SortByPrice from "./_components/SortByPrice";
 import FilterMobile from "./_components/FilterMobile";
 import FilterBar from "./_components/FilterBar";
 
-const SORT_OPTIONS = [
-    { label: "Price: Low to High", value: "price-asc" },
-    { label: "Price: High to Low", value: "price-desc" },
-];
-
 export default function CoursePage() {
     return (
         <main className="flex min-h-[calc(100vh-25%)] flex-col">
@@ -44,6 +39,11 @@ export default function CoursePage() {
         </main>
     );
 }
+
+const SORT_OPTIONS = [
+    { label: "Price: Low to High", value: "price-asc" },
+    { label: "Price: High to Low", value: "price-desc" },
+];
 
 const courses = [
     {

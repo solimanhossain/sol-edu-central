@@ -12,7 +12,7 @@ export default function AvatarMenu() {
     return (
         <DropdownMenu className="text-center">
             <DropdownMenuTrigger asChild>
-                <Avatar className="border-2 border-solblue cursor-pointer">
+                <Avatar className="border-2 border-solLight cursor-pointer">
                     <AvatarImage
                         src="https://github.com/solimanhossain.png"
                         alt="avatar"
