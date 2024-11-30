@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 import CourseCard from "@/components/CourseCard";
+import { getAllCourses } from "@/actions/courseQueries";
 
-export default function Courses() {
+export default async function Courses() {
+    const allCourses = await getAllCourses();
+
     return (
         <section
             id="courses"
@@ -20,29 +23,10 @@ export default function Courses() {
                 </Link>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
-                {courses.map((course) => (
-                    <CourseCard key={course.id} course={course} />
+                {allCourses.map((course) => (
+                    <CourseCard key={course._id} course={course} />
                 ))}
             </div>
         </section>
     );
 }
-
-const courses = [
-    {
-        id: 1,
-        title: "Art",
-        category: "Design",
-        thumbnail: "/images/courses/art.png",
-        chapter: 8,
-        price: 15,
-    },
-    {
-        id: 2,
-        title: "Python",
-        category: "Development",
-        thumbnail: "/images/courses/python.png",
-        chapter: 12,
-        price: 29,
-    },
-];

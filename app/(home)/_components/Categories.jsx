@@ -1,8 +1,11 @@
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAllCategories } from "@/actions/categoryQueries";
 
-export default function Categories() {
+export default async function Categories() {
+    const allCategories = await getAllCategories();
+
     return (
         <section
             id="categories"
@@ -21,10 +24,10 @@ export default function Categories() {
                 </Link>
             </div>
             <div className="mx-auto grid justify-center gap-4 grid-cols-2  md:grid-cols-3 2xl:grid-cols-4">
-                {categories.map((category) => (
+                {allCategories.map((category) => (
                     <Link
                         href="#"
-                        key={category.id}
+                        key={category._id}
                         className="relative overflow-hidden rounded-lg border bg-background p-2 hover:scale-105 transition-all duration-500 ease-in-out"
                     >
                         <div className="flex  flex-col gap-4 items-center justify-between rounded-md p-6">
@@ -42,47 +45,3 @@ export default function Categories() {
         </section>
     );
 }
-
-const categories = [
-    {
-        id: 1,
-        title: "Design",
-        thumbnail: "/images/categories/design.jpg",
-    },
-
-    {
-        id: 2,
-        title: "Personal Development",
-        thumbnail: "/images/categories/personal-development.jpg",
-    },
-    {
-        id: 4,
-        title: "Marketing",
-        thumbnail: "/images/categories/marketing.jpg",
-    },
-    {
-        id: 5,
-        title: "IT & Software",
-        thumbnail: "/images/categories/it-software.jpg",
-    },
-    {
-        id: 6,
-        title: "Photography",
-        thumbnail: "/images/categories/photography.jpg",
-    },
-    {
-        id: 7,
-        title: "Business",
-        thumbnail: "/images/categories/business.jpg",
-    },
-    {
-        id: 3,
-        title: "Music",
-        thumbnail: "/images/categories/music.jpg",
-    },
-    {
-        id: 8,
-        title: "Development",
-        thumbnail: "/images/categories/development.jpg",
-    },
-];

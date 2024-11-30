@@ -8,7 +8,12 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 
-export default function SortByPrice({ SORT_OPTIONS }) {
+const SORT_OPTIONS = [
+    { label: "Price: Low to High", value: "price-asc" },
+    { label: "Price: High to Low", value: "price-desc" },
+];
+
+export default function SortByPrice() {
     return (
         <>
             <Select>
