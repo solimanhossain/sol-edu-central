@@ -1,10 +1,11 @@
-import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 import { getAllCategories } from "@/actions/categoryQueries";
 
 export default async function Categories() {
     const allCategories = await getAllCategories();
+    const showCategories = allCategories.slice(0, 4);
 
     return (
         <section
@@ -15,16 +16,15 @@ export default async function Categories() {
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-bold">
                     Categories
                 </h2>
-
-                <Link
-                    href="#"
+                <button
+                    type="submit"
                     className=" text-sm font-medium  hover:opacity-80 flex items-center gap-1"
                 >
-                    Browse All <ArrowRightIcon className="h-4 w-4" />
-                </Link>
+                    Show All <ArrowDown className="h-4 w-4" />
+                </button>
             </div>
             <div className="mx-auto grid justify-center gap-4 grid-cols-2  md:grid-cols-3 2xl:grid-cols-4">
-                {allCategories.map((category) => (
+                {showCategories.map((category) => (
                     <Link
                         href="#"
                         key={category._id}

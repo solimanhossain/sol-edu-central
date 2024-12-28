@@ -10,15 +10,14 @@ export default async function CoursePage() {
     const allCourses = await getAllCourses();
 
     return (
-        <main className="flex min-h-[calc(100vh-25%)] flex-col">
+        <main className="flex md:min-h-[calc(100vh-25%)] flex-col">
             <div className="container flex-1 pt-20 flex flex-col">
                 <section
                     id="courses"
                     className="space-y-6 dark:bg-transparent py-6"
                 >
-                    <hgroup className="flex items-baseline justify-between  border-gray-200 border-b pb-6 flex-col gap-4 lg:flex-row">
+                    <hgroup className="flex items-baseline justify-between  border-gray-200 border-b pb-6  gap-4 flex-row">
                         <SearchBox />
-
                         <div className="flex items-center justify-end gap-2 max-lg:w-full">
                             <SortByPrice />
                             <FilterMobile />
@@ -26,6 +25,7 @@ export default async function CoursePage() {
                     </hgroup>
                     <FilteredShow />
                 </section>
+
                 <section className="pb-24 pt-6">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                         <aside className="hidden lg:block">

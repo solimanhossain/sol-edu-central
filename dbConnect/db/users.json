@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "663a06e7bfe65e5778eedf2a"
+  },
+  "firstName": "Soliman",
+  "lastName": "Hossain",
+  "password": "Test@123",
+  "email": "soliman@email.com",
+  "phone": "+8801222099033",
+  "role": "Teacher",
+  "bio": "Experienced educator passionate about fostering student learning and development.",
+  "socialMedia": {
+    "linkedin": "linkedin.com/in/solimanhossain"
+  },
+  "avatar": "https://github.com/solimanhossain.png"
+},
+{
+  "_id": {
+    "$oid": "663a0b36bfe65e5778eedf7e"
+  },
+  "firstName": "Senti",
+  "lastName": "SOL",
+  "password": "pass123!",
+  "email": "sentisol@mail.com",
+  "phone": "+8801222099099",
+  "role": "Student",
+  "bio": "Tech enthusiast",
+  "socialMedia": {
+    "youtube": "https://youtube.com/@sentisol"
+  },
+  "avatar": "https://github.com/sentisolbd.png"
+}]

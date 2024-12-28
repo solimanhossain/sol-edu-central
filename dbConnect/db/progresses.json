@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "663a0a2ebfe65e5778eedf60"
+  },
+  "enrollmentedAt": "2024-12-26",
+  "status": "complete",
+  "completedAt": "2024-12-27",
+  "course": {
+    "$oid": "6648184a6fe803e9128d7fba"
+  },
+  "paymentWay": "card",
+  "rating": 4,
+  "user": {
+    "$oid": "663a0b36bfe65e5778eedf7e"
+  },
+  "review": "Nice"
+}]

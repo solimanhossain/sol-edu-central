@@ -2,7 +2,7 @@ import { ArrowRightIcon, BookOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import formatMoney from "@/lib/formatMoney";
+import { formatMoney } from "@/lib/formatMoney";
 import { getSingleCategory } from "@/actions/categoryQueries";
 
 export default async function CourseCard({ course }) {
@@ -17,6 +17,7 @@ export default async function CourseCard({ course }) {
                         src={thumbnail}
                         alt={"course"}
                         className="object-cover"
+                        sizes="auto"
                         fill
                     />
                 </div>

@@ -1,5 +1,5 @@
 import connectMongo from "@/dbConnect/connectMongo";
-import { CourseModel } from "@/models/courseModel";
+import { CourseModel, UserModel, CategoryModel, ProgressModel } from "@/models";
 
 async function getAllCourses(limited = null) {
     await connectMongo();
@@ -8,7 +8,31 @@ async function getAllCourses(limited = null) {
 
 async function getSingleCourse(objectId) {
     await connectMongo();
-    return await CourseModel.findOne({ _id: objectId }).lean();
+    return await CourseModel.findById(objectId)
+        .populate({
+            path: "category",
+            model: CategoryModel,
+        })
+        .populate({
+            path: "instructor",
+            model: UserModel,
+        })
+        .lean();
 }
 
-export { getAllCourses, getSingleCourse };
+async function getInstructorCourses(instructorObjId) {
+    await connectMongo();
+    return await CourseModel.find({ instructor: instructorObjId }).lean();
+}
+
+async function getSingleCategoryCourses(courseId, limited = null) {
+    await connectMongo();
+    return await CourseModel.find({ category: courseId }).limit(limited).lean();
+}
+
+export {
+    getAllCourses,
+    getSingleCourse,
+    getInstructorCourses,
+    getSingleCategoryCourses,
+};

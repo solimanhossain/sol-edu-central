@@ -6,12 +6,15 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import CourseCard from "@/components/CourseCard";
+import { getSingleCategoryCourses } from "@/actions/courseQueries";
 
-export default function ReleatedCoursesSection({ courses }) {
+export default async function ReleatedCoursesSection({ category }) {
+    const courses = await getSingleCategoryCourses(category, 4);
+
     return (
-        <section className="related-courses">
+        <section className="related-courses pb-8 md:pb-12 lg:pb-24">
             <div className="container">
-                <h2 className="title">Related Courses</h2>
+                <h2 className="title pb-4">Related Courses</h2>
                 <Carousel
                     opts={{
                         align: "start",
@@ -23,7 +26,7 @@ export default function ReleatedCoursesSection({ courses }) {
                     <CarouselContent>
                         {courses.map((course) => (
                             <CarouselItem
-                                key={course.id}
+                                key={course?._id}
                                 className="md:basis-1/2 lg:basis-1/3"
                             >
                                 <CourseCard course={course} />

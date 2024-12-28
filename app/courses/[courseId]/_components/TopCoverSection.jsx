@@ -4,21 +4,21 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export default function TopCoverSection() {
+export default function TopCoverSection({
+    course: { title, subtitle, thumbnail },
+}) {
     return (
         <section className="overflow-x-hidden grainy">
             <div className="pt-12  sm:pt-16 container">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="max-w-2xl mx-auto text-center">
                         <h1 className="px-6 text-lg text-gray-600 font-inter">
-                            {"Python for Absoulate Beginners"}
+                            {subtitle}
                         </h1>
                         <p className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
                             <span className="relative inline-flex sm:inline">
                                 <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
-                                <span className="relative">
-                                    {"Python Crash Course"}
-                                </span>
+                                <span className="relative">{title}</span>
                             </span>
                         </p>
 
@@ -50,11 +50,12 @@ export default function TopCoverSection() {
                         <div className="relative mx-auto">
                             <div className="lg:max-w-3xl lg:mx-auto">
                                 <Image
-                                    className="w-full rounded-lg"
-                                    width={768}
-                                    height={463}
-                                    src="/images/courses/python.png"
+                                    priority
+                                    width={640}
+                                    height={480}
+                                    src={thumbnail}
                                     alt="course cover"
+                                    className="w-full rounded-lg"
                                 />
                             </div>
                         </div>

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
     return (
-        <header className="z-50 bg-background/60 backdrop-blur-md md:fixed top-0 left-0 right-0 border-b ">
+        <header className="z-50 bg-background/60 backdrop-blur-md fixed top-0 left-0 right-0 border-b ">
             <nav className="container flex h-20 items-center justify-between py-6 ">
                 <SmNavMenu />
                 <div className="flex gap-6 lg:gap-10">

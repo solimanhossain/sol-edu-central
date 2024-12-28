@@ -19,7 +19,7 @@ export default function Test() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                     align="center"
-                    className="w-56 mt-8 mx-20 md:hidden"
+                    className="w-56 mt-8 mx-8 md:hidden"
                 >
                     <div className="grid grid-flow-row justify-center gap-6 p-4">
                         <MenuBar />

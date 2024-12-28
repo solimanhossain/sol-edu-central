@@ -2,31 +2,19 @@ import Link from "next/link";
 
 export default function MenuBar() {
     return (
-        <>
-            {items?.map((item, index) => (
-                <Link
-                    key={index}
-                    href={item.disabled ? "#" : item.href}
-                    className="menu-tems "
-                >
-                    {item.title}
-                </Link>
-            ))}
-        </>
+        <div className="md:flex gap-6 hidden">
+            <Link
+                href="https://docucraft-sol.vercel.app/"
+                className="menu-tems"
+            >
+                Documentation
+            </Link>
+            <Link href="/pricing" className="menu-tems">
+                Pricing
+            </Link>
+            <Link href="#" className="menu-tems">
+                Blog
+            </Link>
+        </div>
     );
 }
-
-const items = [
-    {
-        title: "Documentation",
-        href: "/docs",
-    },
-    {
-        title: "Pricing",
-        href: "/pricing",
-    },
-    {
-        title: "Blog",
-        href: "/blog",
-    },
-];

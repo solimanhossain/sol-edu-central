@@ -15,7 +15,7 @@ export default function FilterMobile() {
                 <SheetTrigger>
                     <Filter className="h-6 w-6" />
                 </SheetTrigger>
-                <SheetContent side="left">
+                <SheetContent side="right">
                     <SheetHeader>
                         <SheetTitle className="text-left">
                             Filter Courses

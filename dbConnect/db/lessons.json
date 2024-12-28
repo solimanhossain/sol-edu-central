@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "663a0806bfe65e5778eedf35"
+  },
+  "title": "Introduction to Python",
+  "description": "Learn the basics of python programming.",
+  "video_url": "https://example.com/fundamentals_video",
+  "published": true,
+  "slug": "introduction-to-python",
+  "access": "public",
+  "duration_sec": 630
+},
+{
+  "_id": {
+    "$oid": "663a0806bfe65e5778eedf36"
+  },
+  "title": "Python Installation",
+  "description": "Understand how to install Python on different operating systems.",
+  "video_url": "https://example.com/installation_video",
+  "published": true,
+  "slug": "installation-of-python",
+  "access": "public",
+  "duration_sec": 945
+},
+{
+  "_id": {
+    "$oid": "663a0806bfe65e5778eedf38"
+  },
+  "title": "Data types in Python",
+  "description": "Avaible data types in python programming language.",
+  "video_url": "https://example.com/data_types_video",
+  "published": true,
+  "slug": "data-types-in-python",
+  "access": "public",
+  "duration_sec": 750
+},
+{
+  "_id": {
+    "$oid": "663a0806bfe65e5778eedf39"
+  },
+  "title": "Different types of operators",
+  "description": "Learn about different types of operators in Python.",
+  "video_url": "https://example.com/operators_video",
+  "published": true,
+  "slug": "operators-in-python",
+  "access": "private",
+  "duration_sec": 555
+},
+{
+  "_id": {
+    "$oid": "663a0806bfe65e5778eedf40"
+  },
+  "title": "Conditions and Loops",
+  "description": "All types of conditions and loops in python programming language.",
+  "video_url": "https://example.com/conditions_and_loops_video",
+  "published": true,
+  "slug": "conditions-and-loops-in-python",
+  "access": "private",
+  "duration_sec": 2115
+}]

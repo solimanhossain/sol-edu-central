@@ -3,7 +3,7 @@
     "$oid": "6648184a6fe803e9128d7fba"
   },
   "title": "Python Crash Course",
-  "description": "Learn Python programming language from scratch with hands-on exercises.",
+  "description": "Learn Python programming from scratch with this structured and practical course. We'll take you step-by-step through the essentials of Python, starting with basic syntax and progressing to more advanced topics. Solidify your understanding with numerous hands-on exercises that reinforce learning and build confidence in your coding abilities.",
   "thumbnail": "https://i.postimg.cc/BQdNvgds/python.png",
   "modules": [
     {
@@ -21,18 +21,20 @@
   "instructor": {
     "$oid": "663a06e7bfe65e5778eedf2a"
   },
-  "__v": 0,
-  "testimonials": [
-    {
-      "$oid": "663a0a05bfe65e5778eedf58"
-    }
-  ],
   "quizSet": {
     "$oid": "663a096ebfe65e5778eedf4a"
   },
-  "totalEnrolled": [
-    {
-      "$oid": "663a06e7bfe65e5778eedf2a"
-    }
+  "subtitle": "Python for Absoulate Beginners",
+  "createdAt": {
+    "$date": "2024-12-25T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-27T00:00:00.000Z"
+  },
+  "learning": [
+    "Syntax and Data Structures",
+    "Functions and Modules",
+    "Conditon and OOP",
+    "Problem Solving"
   ]
 }]
