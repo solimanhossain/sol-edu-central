@@ -1,0 +1,5 @@
+# api
+GET http://localhost:3000/api/
+###
+# search
+GET http://localhost:3000/api/courses?search=py

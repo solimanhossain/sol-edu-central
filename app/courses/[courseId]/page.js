@@ -3,10 +3,17 @@ import CourseDetailsSection from "./_components/CourseDetailsSection";
 import TopCoverSection from "./_components/TopCoverSection";
 import { getSingleCourse } from "@/actions/courseQueries";
 import ReviewSection from "./_components/ReviewSection";
+import { notFound } from "next/navigation";
 
 export default async function CoursePage({ params }) {
     const { courseId } = await params;
-    const courseDetails = await getSingleCourse(courseId);
+    let courseDetails = [];
+
+    try {
+        courseDetails = await getSingleCourse(courseId.toString());
+    } catch (err) {
+        return notFound();
+    }
 
     return (
         <main className="flex min-h-[calc(100vh-25%)] flex-col">

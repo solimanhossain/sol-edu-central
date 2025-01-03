@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 import { Accordion } from "@/components/ui/accordion";
@@ -6,12 +7,12 @@ import Filter from "./Filter";
 
 export default function FilterBar() {
     const [filter, setFilter] = useState({
-        categories: ["development"],
-        price: ["free"],
-        sort: "",
+        categories: [],
+        price: [],
     });
+
     return (
-        <Accordion defaultValue={["price"]} type="multiple">
+        <Accordion defaultValue={["categories"]} type="multiple">
             <Filter
                 type="categories"
                 filter={filter}
